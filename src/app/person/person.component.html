@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+    <h3 class="text-center">Persons List</h3>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Email</th>
+          <th>phone</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let person of persons">
+          <td>{{person.id}}</td>
+          <td>{{person.name}}</td>
+          <td>{{person.surname}}</td>
+          <td>{{person.email}}</td>
+          <td>{{person.phone}}</td>
+          <td>
+            <button (click)="updatePerson(person.id)" class="btn btn-info">Update</button>
+            <button (click)="deletePerson(person.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
